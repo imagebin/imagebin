@@ -1,0 +1,32 @@
+{
+  "name": "@imagebin/core",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup-node ./index.ts --format esm --dts --shims --target node18 --no-splitting",
+    "dev": "npm run build -- --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/decompress": "^4.2.7",
+    "arch": "^3.0.0",
+    "decompress": "^4.2.1",
+    "execa": "^9.6.0",
+    "is-apng": "^1.2.0",
+    "rimraf": "^6.0.1",
+    "tempy": "^3.1.0"
+  },
+  "devDependencies": {
+    "tsup": "8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,12 @@
+other/
+
+node_modules/
+build/
+out/
+dist/
+coverage/
+bin/
+man.txt
+
+.nx/cache
+.nx/workspace-data

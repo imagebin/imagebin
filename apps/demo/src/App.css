@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+.viewer-image {
+    --left: 0px;
+    --top: 0px;
+    --width: 100px;
+    --height: 100px;
+    --zoom: 1;
+
+    left: round(calc(50% - calc(0.5 * var(--zoom) * var(--width) + var(--left))), 1px);
+    top: round(calc(50% - calc(0.5 * var(--zoom) * var(--height) + var(--top))), 1px);
+    width: calc(var(--zoom) * var(--width));
+    height: calc(var(--zoom) * var(--height));
+    max-width: none;
+    max-height: none;
+}

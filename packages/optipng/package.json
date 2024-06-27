@@ -1,0 +1,35 @@
+{
+  "name": "@imagebin/optipng",
+  "version": "1.0.0",
+  "bin_version": "7.9.1",
+  "description": "",
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**",
+    "vendor/**"
+  ],
+  "bin": {
+    "optipng": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup-node --entry ./install.ts --entry ./cli.ts --entry ./index.ts --format esm --dts --shims --target node18 --no-splitting --clean",
+    "dev": "npm run build -- --watch",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "node ./dist/install.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@imagebin/core": "*"
+  },
+  "devDependencies": {
+    "tsup": "8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

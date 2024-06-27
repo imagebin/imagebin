@@ -1,0 +1,11 @@
+{
+  "$schema": "./../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/optipng",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "cache": true
+    }
+  },
+  "tags": []
+}
