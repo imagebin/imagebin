@@ -15,4 +15,6 @@ if (!is_installed) {
   ];
 
   console.error(messages.join(`\n`));
+  exit(1);
 }
+exit(0);

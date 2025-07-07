@@ -340,15 +340,12 @@ const runCheck = async (
 ) => {
   let check_is_ok = false;
 
-  await execFileP(bin_path, args)
-    .then(({ stdout, stderr }) => {
-      // console.log(stdout);
-      // console.log(stderr);
-      check_is_ok = check(stdout) ? true : false;
-    })
-    .catch((error) => {
-      // throw error;
-    });
+  try {
+    const { stdout } = await execFileP(bin_path, args);
+    check_is_ok = check(stdout) ? true : false;
+  } catch (error) {
+    // ignore error;
+  }
 
   return check_is_ok;
 };

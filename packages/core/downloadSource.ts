@@ -99,7 +99,8 @@ const retry = async (
                 normalizePath(
                   getFileNameFromContentDispositionHeader(
                     res.headers?.["content-disposition"] || ""
-                  )
+                  ) ||
+                    (source_url.split("/").pop() || "").replace(/[?#].*$/, "")
                 )
                   .split("/")
                   .pop() || "";
@@ -113,7 +114,7 @@ const retry = async (
               break;
             }
 
-            const writeStream = createWriteStream(`${target_path}${filename}`);
+            const writeStream = createWriteStream(`${target_path}/${filename}`);
 
             writeStream.on("finish", () => {
               writeStream.close();

@@ -1,4 +1,3 @@
-// import { Button } from "@imagebin/buttons";
 import {
   DragEvent,
   PointerEvent,
