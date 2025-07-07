@@ -27,7 +27,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        run: npm install --ignore-scripts
+        run: npm install
         shell: bash
 
       - name: Print Environment Info
