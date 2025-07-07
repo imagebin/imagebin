@@ -27,8 +27,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        run: npm install
         shell: bash
+        run: |
+          npm ci --ignore-scripts
+          npm rebuild nx ljharb-monorepo-symlink-test esbuild @tailwindcss/oxide
 
       - name: Print Environment Info
         run: npx nx report
