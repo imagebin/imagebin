@@ -28,9 +28,10 @@ jobs:
 
       - name: Install dependencies
         shell: bash
-        run: |
-          npm ci --ignore-scripts
-          npm rebuild nx ljharb-monorepo-symlink-test esbuild @tailwindcss/oxide
+        run: npm ci --ignore-scripts
+      - name: Rebuild dependencies
+        shell: bash
+        run: npm rebuild nx ljharb-monorepo-symlink-test esbuild @tailwindcss/oxide
 
       - name: Print Environment Info
         run: npx nx report

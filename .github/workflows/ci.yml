@@ -28,9 +28,8 @@ jobs:
           node-version: 20
           cache: "npm"
 
-      - run: |
-          npm ci --ignore-scripts
-          npm rebuild nx ljharb-monorepo-symlink-test esbuild @tailwindcss/oxide
+      - run: npm ci --ignore-scripts
+      - run: npm rebuild nx ljharb-monorepo-symlink-test esbuild @tailwindcss/oxide
       - uses: nrwl/nx-set-shas@v4
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
