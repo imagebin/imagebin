@@ -1,4 +1,4 @@
-name: Lint / Test / Build
+name: Push on main / PR
 
 on:
   push:
@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   main:
+    name: Lint / Test / Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

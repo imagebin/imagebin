@@ -1,4 +1,4 @@
-name: Publish
+name: Push with version tag
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - v*.*.*
 
 jobs:
-  test:
+  main:
     name: Publish
     runs-on: ubuntu-latest
     permissions:
