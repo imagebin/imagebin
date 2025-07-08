@@ -14,7 +14,8 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -23,13 +24,16 @@ jobs:
       # - run: npx nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="build"
 
       # Cache node_modules
-      - uses: actions/setup-node@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "npm"
 
-      - run: npm ci --ignore-scripts
-      - run: npm rebuild nx ljharb-monorepo-symlink-test esbuild @tailwindcss/oxide
+      - name: Install dependencies
+        run: npm install
+        shell: bash
+
       - uses: nrwl/nx-set-shas@v4
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud

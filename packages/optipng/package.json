@@ -20,7 +20,7 @@
     "build": "tsup-node --entry ./install.ts --entry ./cli.ts --entry ./index.ts --format esm --dts --shims --target node18 --no-splitting --clean",
     "dev": "npm run build -- --watch",
     "typecheck": "tsc --noEmit",
-    "postinstall": "node ./dist/install.js"
+    "postinstall": "node postinstall.js && node ./dist/install.js"
   },
   "keywords": [],
   "author": "",
