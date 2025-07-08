@@ -1,6 +1,8 @@
-import {existsSync} from 'node:fs';
-import {execSync} from 'node:child_process';
+import { existsSync } from "node:fs";
+import { exit } from "node:process";
 
-if (!existsSync('./dist')) {
-  execSync('npm run build --if-present');
+if (!existsSync("./dist")) {
+  exit(0);
 }
+
+exit(1);
