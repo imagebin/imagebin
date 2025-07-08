@@ -7,7 +7,6 @@ dist/
 coverage/
 bin/
 man.txt
-package-lock.json
 
 .nx/cache
 .nx/workspace-data
