@@ -347,6 +347,7 @@ const runCheck = async (
     // ignore error;
   }
 
+  console.log("Test")
   return check_is_ok;
 };
 
