@@ -30,6 +30,10 @@ jobs:
         run: npm ci
         shell: bash
 
+      - name: Build all
+        run: npx nx run-many -t build
+        shell: bash
+
       - name: Print Environment Info
         run: npx nx report
         shell: bash
