@@ -36,7 +36,7 @@ jobs:
         shell: bash
 
       - name: Build all
-        run: npx nx run-many --target=build --all --exclude=@imagebin/demo
+        run: npx nx run-many --targets=build --exclude=@imagebin/demo --verbose
         shell: bash
 
       - uses: nrwl/nx-set-shas@v4
