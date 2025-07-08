@@ -31,7 +31,7 @@ jobs:
         shell: bash
 
       - name: Build all
-        run: npx nx run-many -t build
+        run: npx nx run-many -t build --projects=packages/*
         shell: bash
 
       - name: Print Environment Info
