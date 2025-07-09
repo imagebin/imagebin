@@ -24,15 +24,6 @@
   "references": [
     {
       "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "../../packages/core"
-    },
-    {
-      "path": "../../packages/optipng"
-    },
-    {
-      "path": "../../packages/oxipng"
     }
   ]
 }
