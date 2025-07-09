@@ -11,6 +11,9 @@ import oxipng from '@imagebin/oxipng'
 export default defineConfig({
   build: {
     assetsInlineLimit: 0,
+    // rollupOptions: {
+    //   external: ['vite', '@imagebin/oxipng']
+    // },
   },
   plugins: [
     tailwindcss(),
