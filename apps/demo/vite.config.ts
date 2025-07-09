@@ -10,10 +10,7 @@ import oxipng from '@imagebin/oxipng'
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    assetsInlineLimit: 0,
-    // rollupOptions: {
-    //   external: ['vite', '@imagebin/oxipng']
-    // },
+    assetsInlineLimit: 0
   },
   plugins: [
     tailwindcss(),
