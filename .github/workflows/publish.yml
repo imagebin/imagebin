@@ -31,7 +31,7 @@ jobs:
         shell: bash
 
       - name: Build all
-        run: npx nx run-many --targets=build --exclude=@imagebin/demo --verbose
+        run: npx nx run-many --targets=lint,test,build --exclude=@imagebin/demo --verbose
         shell: bash
 
       - name: Print Environment Info

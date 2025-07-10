@@ -36,11 +36,11 @@ jobs:
         shell: bash
 
       - name: Build all
-        run: npx nx run-many --targets=build --exclude=@imagebin/demo --verbose
+        run: npx nx run-many --targets=lint,test,build --exclude=@imagebin/demo --verbose
         shell: bash
 
-      - uses: nrwl/nx-set-shas@v4
+      # - uses: nrwl/nx-set-shas@v4
 
-      # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
-      # - run: npx nx-cloud record -- echo Hello World
-      - run: npx nx affected -t lint test build --verbose
+      # # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
+      # # - run: npx nx-cloud record -- echo Hello World
+      # - run: npx nx affected -t lint test build --verbose
