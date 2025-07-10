@@ -30,8 +30,16 @@ jobs:
         run: npm ci
         shell: bash
 
-      - name: Build all
-        run: npx nx run-many --targets=lint,test,build --verbose
+      - name: Build packages
+        run: npx nx run-many --targets=lint,test,build --exclude=apps/** --verbose
+        shell: bash
+
+      - name: Re-install dependencies (install binaries)
+        run: npm install
+        shell: bash
+
+      - name: Build apps
+        run: npx nx run-many --targets=lint,test,build --include=apps/** --verbose
         shell: bash
 
       - name: Print Environment Info
