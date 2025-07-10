@@ -2,14 +2,12 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^typecheck", "^build", "typecheck"],
+      "dependsOn": ["^build", "typecheck"],
       "outputs": ["{projectRoot}/dist"],
       "cache": true
     },
-    "build_cli": {
-      "cache": true
-    },
     "typecheck": {
+      "dependsOn": ["^build"],
       "cache": true
     },
     "lint": {
