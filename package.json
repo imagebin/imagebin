@@ -1,10 +1,10 @@
 {
-  "name": "root",
+  "name": "@imagebin/monorepo",
   "workspaces": [
     "packages/*",
     "apps/*"
   ],
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "type": "module",
   "main": "index.js",
