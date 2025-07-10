@@ -31,5 +31,6 @@
   "release": {
     "projects": ["packages/*"],
     "projectsRelationship": "independent"
-  }
+  },
+  "tasksRunnerOptions": {}
 }
