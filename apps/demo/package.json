@@ -9,9 +9,7 @@
     "prebuild": "npm run typecheck",
     "build": "vite build",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "build_": "nx vite:build",
-    "preview_": "nx vite:preview"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
